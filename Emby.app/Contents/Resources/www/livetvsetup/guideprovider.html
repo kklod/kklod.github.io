@@ -1,0 +1,22 @@
+<div is="emby-scroller" class="view flex flex-direction-column scrollFrameY flex-grow" data-mousewheel="true" data-horizontal="false" data-centerfocus="card">
+    <div class="scrollSlider flex-grow flex-direction-column padded-left padded-left-page padded-right padded-top-page padded-bottom-page settingsContainer">
+        <form class="auto-center">
+
+            <h2>
+                ${HeaderGuideDataSetup}
+            </h2>
+
+            <div class="selectContainer">
+                <select is="emby-select" class="selectCountry" data-mini="true" required="required" label="${LabelCountry}"></select>
+            </div>
+            <div class="selectContainer fldGuideProvider hide">
+                <select is="emby-select" class="selectProvider" data-mini="true" required="required" label="${LabelGuideSource}"></select>
+            </div>
+
+            <div class="flex justify-content-flex-end">
+                <button is="emby-button" type="submit" class="raised button-submit btnSubmit"><span>${ButtonNext}</span><i class="md-icon button-icon button-icon-right">arrow_forward</i></button>
+                <button is="emby-button" type="button" class="raised button-cancel btnCancel"><span>${Cancel}</span></button>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,40 @@
+<div is="emby-scroller" class="view flex flex-direction-column scrollFrameY flex-grow withTabs" data-mousewheel="true" data-horizontal="false" data-centerfocus="card">
+    <div class="scrollSlider flex-grow flex-direction-column padded-left padded-left-page padded-right padded-top-page padded-bottom-page settingsContainer">
+        <div>
+
+            <div class="verticalSection padded-bottom padded-top premiereInfo sectionTitle-cards" style="margin-top:0;">
+
+            </div>
+
+            <div class="verticalSection">
+                <div class="sectionTitleContainer sectionTitleContainer-cards">
+                    <h2 class="sectionTitle sectionTitle-cards">
+                        <span>${HeaderTVSources}</span>
+                    </h2>
+                    <button is="emby-button" type="button" class="fab btnAddDevice submit sectionTitleButton" style="margin-left:1em;" title="${Add}" aria-label="${Add}">
+                        <i class="md-icon button-icon">&#xE145;</i>
+                    </button>
+                </div>
+                <div class="devicesList itemsContainer vertical-wrap" is="emby-itemscontainer" style="margin-top: .5em;"></div>
+            </div>
+
+            <div class="verticalSection">
+                <div class="sectionTitleContainer sectionTitleContainer-cards flex align-items-center flex-wrap-wrap">
+                    <h2 class="sectionTitle sectionTitle-cards">${HeaderGuideProviders}</h2>
+                    <button is="emby-button" type="button" class="fab btnAddProvider submit" style="margin-left:1em;" title="${Add}" aria-label="${Add}">
+                        <i class="md-icon button-icon">&#xE145;</i>
+                    </button>
+
+
+                    <button is="emby-button" type="button" class="raised raised-mini btnRefresh button-cancel" style="margin-left:1em;">
+                        <i class="md-icon button-icon button-icon-left">refresh</i>
+                        <span>${ButtonRefreshGuideData}</span>
+                    </button>
+                    <progress max="100" min="0" class="refreshGuideProgress"></progress>
+                </div>
+
+                <div class="providerList itemsContainer vertical-wrap" is="emby-itemscontainer" style="margin-top: .5em;"></div>
+            </div>
+        </div>
+    </div>
+</div>

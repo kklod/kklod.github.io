@@ -1,0 +1,103 @@
+<div is="emby-scroller" class="view flex flex-direction-column scrollFrameY flex-grow withTabs" data-mousewheel="true" data-horizontal="false" data-centerfocus="card">
+    <div class="scrollSlider flex-grow flex-direction-column padded-left padded-left-page padded-right padded-top-page padded-bottom-page settingsContainer">
+        <div class="readOnlyContent auto-center padded-top">
+
+            <form class="liveTvSettingsForm">
+                <div class="selectContainer">
+                    <select is="emby-select" id="selectGuideDays" label="${LabelNumberOfGuideDays}">
+                        <option value="">${OptionAutomatic}</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                    </select>
+                    <div class="fieldDescription">${LabelNumberOfGuideDaysHelp}</div>
+                </div>
+                <div class="checkboxContainer checkboxContainer-withDescription fldWakeServer hide">
+                    <label>
+                        <input type="checkbox" is="emby-checkbox" class="chkWakeServer" />
+                        <span>${LabelAutomaticallyWakeServerForRecordings}</span>
+                    </label>
+                    <div class="fieldDescription checkboxFieldDescription">${LabelAutomaticallyWakeServerForRecordingsHelp}</div>
+                </div>
+                <div class="inputContainer">
+                    <div class="flex align-items-center">
+                        <div class="flex-grow">
+                            <input is="emby-input" id="txtRecordingPath" label="${LabelRecordingPath}" autocomplete="off" />
+                        </div>
+                        <button type="button" is="paper-icon-button-light" id="btnSelectRecordingPath" title="${ButtonSelectDirectory}" aria-label="${ButtonSelectDirectory}" class="emby-input-iconbutton"><i class="md-icon">search</i></button>
+                    </div>
+                    <div class="fieldDescription">${LabelRecordingPathHelp}</div>
+                </div>
+                <div class="inputContainer">
+                    <div class="flex align-items-center">
+                        <div class="flex-grow">
+                            <input is="emby-input" id="txtMovieRecordingPath" label="${LabelMovieRecordingPath}" autocomplete="off" />
+                        </div>
+                        <button type="button" is="paper-icon-button-light" id="btnSelectMovieRecordingPath" title="${ButtonSelectDirectory}" aria-label="${ButtonSelectDirectory}" class="emby-input-iconbutton"><i class="md-icon">search</i></button>
+                    </div>
+                </div>
+                <div class="inputContainer">
+                    <div class="flex align-items-center">
+                        <div class="flex-grow">
+                            <input is="emby-input" id="txtSeriesRecordingPath" label="${LabelSeriesRecordingPath}" autocomplete="off" />
+                        </div>
+                        <button type="button" is="paper-icon-button-light" id="btnSelectSeriesRecordingPath" title="${ButtonSelectDirectory}" aria-label="${ButtonSelectDirectory}" class="emby-input-iconbutton"><i class="md-icon">search</i></button>
+                    </div>
+                </div>
+                <div class="verticalSection">
+                    <h2 class="sectionTitle">${HeaderDefaultRecordingSettings}</h2>
+                    <div class="inputContainer">
+                        <div class="flex align-items-center">
+                            <div class="flex-grow">
+                                <input is="emby-input" type="number" id="txtPrePaddingMinutes" pattern="[0-9]*" required="required" min="0" step="1" label="${LabelStartWhenPossible}" />
+                            </div>
+                            <div class="fieldDescription" style="margin-left:.5em;font-size:90%;margin-top:1.3em;">
+                                ${MinutesBefore}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="inputContainer">
+                        <div class="flex align-items-center">
+                            <div class="flex-grow">
+                                <input is="emby-input" type="number" id="txtPostPaddingMinutes" pattern="[0-9]*" required="required" min="0" step="1" label="${LabelStopWhenPossible}" />
+                            </div>
+                            <div class="fieldDescription" style="margin-left:.5em;font-size:90%;margin-top:1.3em;">
+                                ${MinutesAfter}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="verticalSection">
+                    <h2 class="sectionTitle">${HeaderRecordingPostProcessing}</h2>
+                    <div class="inputContainer">
+                        <div class="flex align-items-center">
+                            <div class="flex-grow">
+                                <input is="emby-input" type="text" id="txtPostProcessor" label="${LabelPostProcessor}" />
+                            </div>
+                            <button type="button" is="paper-icon-button-light" id="btnSelectPostProcessorPath" class="emby-input-iconbutton"><i class="md-icon">search</i></button>
+                        </div>
+                    </div>
+                    <div class="inputContainer">
+                        <input is="emby-input" type="text" id="txtPostProcessorArguments" label="${LabelPostProcessorArguments}" />
+                        <div class="fieldDescription">${LabelPostProcessorArgumentsHelp}</div>
+                    </div>
+                </div>
+                <br />
+                <div>
+                    <button is="emby-button" type="submit" class="raised button-submit block"><span>${ButtonSave}</span></button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

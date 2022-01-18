@@ -1,0 +1,27 @@
+<div id="wizardStartPage" data-role="page" class="page wizardPage">
+
+    <div class="padded-left padded-right padded-bottom-page">
+
+        <form class="wizardStartForm" style="margin: 0 auto;">
+
+            <div class="flex align-items-center" style="margin: 1.5em 0;">
+                <h1 style="margin:0;" class="flex-grow">
+                    ${HeaderWelcomeToEmby}
+                </h1>
+                <a is="emby-linkbutton" href="https://support.emby.media/support/solutions/articles/44001159034-quick-start" target="_blank" class="raised raised-mini raised-alt flex-shrink-zero">
+                    <span>${ButtonQuickStartGuide}</span>
+                </a>
+            </div>
+
+            <p style="margin:2em 0;">${ThisWizardWillGuideYou}</p>
+
+            <div class="selectContainer">
+                <select is="emby-select" id="selectLocalizationLanguage" label="${LabelPreferredDisplayLanguage}"></select>
+            </div>
+            <div class="flex justify-content-flex-end padded-top">
+                <button is="emby-button" type="submit" class="raised button-submit"><span>${Next}</span><i class="md-icon button-icon button-icon-right">arrow_forward</i></button>
+            </div>
+        </form>
+
+    </div>
+</div>

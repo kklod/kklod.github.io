@@ -1,0 +1,20 @@
+<div is="emby-scroller" class="view flex flex-direction-column scrollFrameY flex-grow" data-mousewheel="true" data-horizontal="false" data-centerfocus="card" data-bindheader="true">
+    <div class="scrollSlider flex-grow flex-direction-column padded-left padded-left-page padded-right padded-top-page padded-bottom-page settingsContainer">
+        <form class="deviceForm auto-center">
+
+            <div class="verticalSection verticalSection-extrabottompadding">
+                <div class="sectionTitleContainer flex align-items-center">
+                    <h2 class="sectionTitle reportedName"></h2>
+                </div>
+
+                <div class="inputContainer">
+                    <input is="emby-input" type="text" id="txtCustomName" label="${LabelCustomDeviceDisplayName}" />
+                    <div class="fieldDescription">${LabelCustomDeviceDisplayNameHelp}</div>
+                </div>
+            </div>
+            <div>
+                <button is="emby-button" type="submit" class="raised button-submit block"><span>${ButtonSave}</span></button>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,67 @@
+<div is="emby-scroller" data-horizontal="false" data-centerfocus="card" class="formDialogContent">
+    <div class="scrollSlider">
+        <form class="dialogContentInner dialog-content-centered padded-left padded-right" style="padding-top:2em;">
+            <div class="verticalSection">
+                <div class="selectContainer viewSetting hide" data-settingname="imageType">
+                    <select is="emby-select" label="${LabelView}" class="selectImageType">
+                        <option value="primary">${Primary}</option>
+                        <option value="banner">${Banner}</option>
+                        <option value="disc">${Disc}</option>
+                        <option value="logo">${Logo}</option>
+                        <option value="thumb">${Thumb}</option>
+                        <option value="list">${List}</option>
+                    </select>
+                </div>
+
+                <div class="checkboxContainer viewSetting viewSetting-checkboxContainer hide" data-settingname="groupBySeries">
+                    <label>
+                        <input is="emby-checkbox" type="checkbox" />
+                        <span>${GroupBySeries}</span>
+                    </label>
+                </div>
+
+                <div class="checkboxContainer checkboxContainer-withDescription viewSetting viewSetting-checkboxContainer hide chkGroupItemsIntoCollections" data-settingname="groupItemsIntoCollections">
+                    <label>
+                        <input is="emby-checkbox" type="checkbox" />
+                        <span>${GroupItemsIntoCollections}</span>
+                    </label>
+                    <div class="fieldDescription checkboxFieldDescription">${GroupItemsIntoCollectionsHelp}</div>
+                </div>
+
+                <div class="checkboxContainer checkboxContainer-withDescription viewSetting viewSetting-checkboxContainer hide chkGroupItemsIntoTags" data-settingname="groupItemsIntoTags">
+                    <label>
+                        <input is="emby-checkbox" type="checkbox" />
+                        <span>${GroupItemsIntoTags}</span>
+                    </label>
+                    <div class="fieldDescription checkboxFieldDescription">${GroupItemsIntoTagsHelp}</div>
+                </div>
+
+                <div class="verticalSection showFieldsSection hide">
+                    <h2 class="checkboxListLabel">${HeaderShowFields}</h2>
+                    <div class="checkboxList">
+                        <label class="hide viewField" data-field="Name" data-excludeviewtype="list">
+                            <input is="emby-checkbox" type="checkbox" class="chkField" />
+                            <span>${Title}</span>
+                        </label>
+                        <label class="hide viewField" data-field="ProductionYear" data-excludeviewtype="list">
+                            <input is="emby-checkbox" type="checkbox" class="chkField" />
+                            <span>${Year}</span>
+                        </label>
+                        <label class="hide viewField" data-field="CommunityRating" data-excludeviewtype="list">
+                            <input is="emby-checkbox" type="checkbox" class="chkField" />
+                            <span>${CommunityRating}</span>
+                        </label>
+                        <label class="hide viewField" data-field="CriticRating" data-excludeviewtype="list">
+                            <input is="emby-checkbox" type="checkbox" class="chkField" />
+                            <span>${CriticRating}</span>
+                        </label>
+                        <label class="hide viewField" data-field="OfficialRating" data-excludeviewtype="list">
+                            <input is="emby-checkbox" type="checkbox" class="chkField" />
+                            <span>${ParentalRating}</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

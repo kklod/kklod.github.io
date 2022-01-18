@@ -1,0 +1,46 @@
+<div class="flex align-items-center focuscontainer-x itemsViewSettingsContainer guideSettingsContainer padded-bottom hide">
+
+    <button is="emby-button" class="btnSelectDate btnSelectDate-main raised raised-mini hide">
+        <i class="md-icon button-icon button-icon-left" style="margin-left:0;">date_range</i>
+        <span class="btnDateText btnDateText-main" style="white-space:nowrap;"></span>
+        <i class="md-icon button-icon button-icon-right">arrow_drop_down</i>
+    </button>
+
+    <button is="paper-icon-button-light" class="btnGuideViewSettings">
+        <i class="md-icon">&#xE5D3;</i>
+    </button>
+</div>
+
+<div is="emby-scroller" class="headerScroller" data-mousewheel="false" data-skipfocuswhenvisible="true" data-horizontal="true" data-forcenativescroll="true" data-scrollbuttons="false">
+
+    <div class="scrollSlider">
+
+        <div class="guide-headerTimeslots secondaryText epgScrollSlider">
+            <div class="channelCell firstChannelCell">
+                <button is="emby-button" class="btnSelectDate btnSelectDate-side hide button-link secondaryText">
+                    <span class="btnDateText btnDateText-side" style="white-space:nowrap;"></span>
+                </button>
+
+                <button is="paper-icon-button-light" type="button" class="btnGuideViewSettings btnGuideViewSettings-side hide">
+                    <i class="md-icon">&#xE5D3;</i>
+                </button>
+            </div>
+            <div class="epgCurrentProgramInfo"></div>
+            <div class="timeslotHeaders flex flex-grow flex-direction-row"></div>
+        </div>
+    </div>
+
+</div>
+
+<div is="emby-scroller" class="flex-grow virtualScrollerScrollContainer" data-skipfocuswhenvisible="true" data-horizontal="false" data-forcenativescroll="true">
+
+    <div class="scrollSlider epgScrollSlider focuscontainer-x focuscontainer-y focus-bysubcontainer" style="position:relative;">
+
+        <div is="emby-itemscontainer" data-virtualscrolllayout="vertical-grid" class="itemsContainer vertical-list padded-bottom-page epgItemsContainer">
+
+        </div>
+
+        <button is="emby-button" class="btnLiveGuide raised hide" aria-label="${Live}" tabindex="-1"><span class="btnLiveGuideText">${Live}</span></button>
+    </div>
+
+</div>

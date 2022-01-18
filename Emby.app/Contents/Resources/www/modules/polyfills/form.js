@@ -1,0 +1,1 @@
+HTMLFormElement.prototype.requestSubmit||(HTMLFormElement.prototype.requestSubmit=function(submitter){"use strict";submitter?submitter.click():((submitter=document.createElement("input")).type="submit",submitter.hidden=!0,this.appendChild(submitter),submitter.click(),this.removeChild(submitter))});

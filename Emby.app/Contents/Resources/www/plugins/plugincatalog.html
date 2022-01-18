@@ -1,0 +1,25 @@
+<div is="emby-scroller" class="view flex flex-direction-column scrollFrameY flex-grow with-tabs" data-mousewheel="true" data-horizontal="false" data-centerfocus="card">
+    <div class="scrollSlider flex-grow flex-direction-column padded-top-page padded-bottom-page settingsContainer">
+        <div class="catalogMain padded-bottom-page" style="margin-top:3em;">
+
+            <div class="verticalSection controlsSection padded-left padded-left-page padded-right">
+                <div class="sectionTitleContainer sectionTitleContainer-cards">
+
+                    <div class="sectionTitle sectionTitle-cards flex align-items-center" style="display:flex!important;">
+                        <div class="selectContainer">
+                            <select is="emby-select" id="selectSystem" label="${LabelDisplayPluginsFor}">
+                                <option value="Server">${HeaderEmbyServer}</option>
+                                <option value="MBClassic">${PluginTabAppClassic}</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="noPlugins hide">${MessageNoAvailablePlugins}</div>
+
+            <div class="pluginTiles" style="text-align:left;"></div>
+        </div>
+    </div>
+</div>

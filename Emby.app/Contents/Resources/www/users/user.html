@@ -1,0 +1,217 @@
+<div is="emby-scroller" class="view flex flex-direction-column scrollFrameY flex-grow" data-mousewheel="true" data-horizontal="false" data-centerfocus="card">
+    <div class="scrollSlider flex-grow flex-direction-column padded-left padded-left-page padded-right padded-top-page padded-bottom-page settingsContainer">
+        <div class="readOnlyContent auto-center">
+
+            <div class="verticalSection">
+                <div class="sectionTitleContainer flex align-items-center">
+                    <h2 class="sectionTitle username"></h2>
+                </div>
+            </div>
+
+            <div class="localnav userProfileNavigation">
+                <a href="#" is="emby-linkbutton" class="raised ui-btn-active">${TabProfile}</a>
+                <a href="#" is="emby-linkbutton" class="raised userEditTabButton" data-href="users/userlibraryaccess">${TabAccess}</a>
+                <a href="#" is="emby-linkbutton" class="raised userEditTabButton" data-href="users/userparentalcontrol">${TabParentalControl}</a>
+                <a href="#" is="emby-linkbutton" class="raised userEditTabButton" data-href="userpassword.html">${TabPassword}</a>
+            </div>
+            <form class="editUserProfileForm">
+
+                <div class="disabledUserBanner infoBanner hide" style="margin-bottom:2em;">
+                    <div class="btn btnDarkAccent btnStatic">
+                        <div>
+                            ${HeaderThisUserIsCurrentlyDisabled}
+                        </div>
+                    </div>
+
+                </div>
+                <p class="lnkEditUserPreferencesContainer">
+                    <a class="lnkEditUserPreferences button-link" href="#" is="emby-linkbutton">${ButtonEditOtherUserPreferences}</a>
+                </p>
+                <div class="fldUserName inputContainer">
+                    <input is="emby-input" class="txtUserName" required type="text" label="${LabelName}" />
+                    <div class="fieldDescription">${NewUserNameHelp}</div>
+                </div>
+                <div class="fldConnectInfo">
+                    <div class="inputContainer">
+                        <input is="emby-input" class="txtConnectUserName" type="text" label="${LabelConnectUserName}" />
+                        <div class="fieldDescription">
+                            <div>${LabelConnectUserNameHelp}</div>
+                            <div style="margin-top: .75em;">
+                                <a is="emby-linkbutton" class="button-link" href="https://emby.media/connect" target="_blank">${ButtonLearnMoreAboutEmbyConnect}</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="selectContainer fldSelectLoginProvider hide">
+                    <select class="selectLoginProvider" is="emby-select" label="${LabelAuthProvider}"></select>
+                    <div class="fieldDescription">${AuthProviderHelp}</div>
+                </div>
+                <div class="checkboxContainer checkboxContainer-withDescription fldRemoteAccess hide">
+                    <label>
+                        <input type="checkbox" is="emby-checkbox" class="chkRemoteAccess" />
+                        <span>${AllowRemoteAccess}</span>
+                    </label>
+                    <div class="fieldDescription checkboxFieldDescription">${AllowRemoteAccessHelp}</div>
+                </div>
+                <label class="checkboxContainer">
+                    <input type="checkbox" is="emby-checkbox" class="chkIsAdmin" />
+                    <span>${OptionAllowUserToManageServer}</span>
+                </label>
+                <div class="featureAccessFields verticalSection">
+                    <h2 class="checkboxListLabel">${HeaderFeatureAccess}</h2>
+                    <div class="checkboxList">
+                        <label>
+                            <input type="checkbox" is="emby-checkbox" class="chkEnableLiveTvAccess" />
+                            <span>${OptionAllowBrowsingLiveTv}</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" is="emby-checkbox" class="chkManageLiveTv" />
+                            <span>${OptionAllowManageLiveTv}</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="verticalSection">
+                    <h2 class="checkboxListLabel">${HeaderPlayback}</h2>
+                    <div class="checkboxList">
+                        <label>
+                            <input type="checkbox" is="emby-checkbox" class="chkEnableMediaPlayback" />
+                            <span>${OptionAllowMediaPlayback}</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" is="emby-checkbox" class="chkEnableAudioPlaybackTranscoding" />
+                            <span>${OptionAllowAudioPlaybackTranscoding}</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" is="emby-checkbox" class="chkEnableVideoPlaybackTranscoding" />
+                            <span>${OptionAllowVideoPlaybackTranscoding}</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" is="emby-checkbox" class="chkEnableVideoPlaybackRemuxing" />
+                            <span>${OptionAllowVideoPlaybackRemuxing}</span>
+                        </label>
+                    </div>
+                    <div class="fieldDescription">${OptionAllowMediaPlaybackTranscodingHelp}</div>
+                </div>
+                <br />
+                <div class="verticalSection">
+
+                    <div class="selectContainer fldStreamLimit">
+                        <select is="emby-select" class="selectStreamLimit" label="${LabelSimultaneousStreamLimit}">
+                        </select>
+                        <div class="fieldDescription">${SimultaneousStreamLimitHelp}</div>
+                        <div class="fieldDescription streamLimitPremiereInfo"></div>
+                    </div>
+
+                    <div class="inputContainer">
+                        <input is="emby-input" type="number" class="txtRemoteClientBitrateLimit" pattern="[0-9]*" min="0" step=".25" label="${LabelRemoteClientBitrateLimit}" />
+                        <div class="fieldDescription">${LabelRemoteClientBitrateLimitHelp}</div>
+                        <div class="fieldDescription">${LabelUserRemoteClientBitrateLimitHelp}</div>
+                    </div>
+                </div>
+                <div class="verticalSection">
+                    <h2 class="checkboxListLabel">${HeaderAllowMediaDeletionFrom}</h2>
+                    <div class="checkboxList">
+                        <label class="checkboxContainer">
+                            <input type="checkbox" is="emby-checkbox" class="chkEnableDeleteAllFolders" />
+                            <span>${AllLibraries}</span>
+                        </label>
+                        <div class="deleteAccess">
+                        </div>
+                    </div>
+                </div>
+                <div class="verticalSection">
+                    <h2 class="checkboxListLabel">${HeaderRemoteControl}</h2>
+                    <div class="checkboxList">
+                        <label>
+                            <input type="checkbox" is="emby-checkbox" class="chkEnableRemoteControlOtherUsers" />
+                            <span>${OptionAllowRemoteControlOthers}</span>
+                        </label>
+
+                        <label>
+                            <input type="checkbox" is="emby-checkbox" class="chkRemoteControlSharedDevices" />
+                            <span>${OptionAllowRemoteSharedDevices}</span>
+                        </label>
+                    </div>
+                    <div class="fieldDescription">${OptionAllowRemoteSharedDevicesHelp}</div>
+                </div>
+                <div class="verticalSection">
+                    <h2 class="checkboxListLabel">${Downloads}</h2>
+                    <div class="checkboxList">
+                        <label>
+                            <input type="checkbox" is="emby-checkbox" class="chkEnableDownloading" />
+                            <span>${OptionAllowContentDownloading}</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" is="emby-checkbox" class="chkEnableSyncTranscoding" />
+                            <span>${OptionAllowSyncTranscoding}</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="verticalSection">
+                    <h2 class="checkboxListLabel">${Subtitles}</h2>
+                    <div class="checkboxList">
+                        <label>
+                            <input type="checkbox" is="emby-checkbox" class="chkEnableSubtitleDownloading" />
+                            <span>${AllowSubtitleDownloading}</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" is="emby-checkbox" class="chkEnableSubtitleManagement" />
+                            <span>${AllowSubtitleManagement}</span>
+                        </label>
+                    </div>
+                </div>
+                <br />
+                <div class="checkboxContainer checkboxContainer-withDescription">
+                    <label>
+                        <input type="checkbox" is="emby-checkbox" class="chkEnableConversion" />
+                        <span>${AllowMediaConversion}</span>
+                    </label>
+                    <div class="fieldDescription checkboxFieldDescription">${AllowMediaConversionHelp}</div>
+                </div>
+                <div class="checkboxContainer checkboxContainer-withDescription">
+                    <label>
+                        <input type="checkbox" is="emby-checkbox" class="chkEnableSharing" />
+                        <span>${OptionAllowLinkSharing}</span>
+                    </label>
+                    <div class="fieldDescription checkboxFieldDescription sharingHelp"></div>
+                </div>
+                <div class="checkboxContainer checkboxContainer-withDescription">
+                    <label>
+                        <input type="checkbox" is="emby-checkbox" class="chkAllowChangeProfile" />
+                        <span>${AllowChangingImageAndPassword}</span>
+                    </label>
+                </div>
+                <div class="checkboxContainer checkboxContainer-withDescription fldIsEnabled">
+                    <label>
+                        <input type="checkbox" is="emby-checkbox" class="chkDisabled" />
+                        <span>${OptionDisableUser}</span>
+                    </label>
+                    <div class="fieldDescription checkboxFieldDescription">${OptionDisableUserHelp}</div>
+                </div>
+                <label class="checkboxContainer">
+                    <input type="checkbox" is="emby-checkbox" class="chkIsHidden" />
+                    <span>${OptionHideUserLocal}</span>
+                </label>
+                <div class="checkboxContainer checkboxContainer-withDescription">
+                    <label>
+                        <input type="checkbox" is="emby-checkbox" class="chkIsHiddenRemotely" />
+                        <span>${OptionHideUserRemote}</span>
+                    </label>
+                    <div class="fieldDescription checkboxFieldDescription">${OptionHideUserFromLoginHelp}</div>
+                </div>
+                <div class="checkboxContainer checkboxContainer-withDescription fldHideFromUnusedDevices hide">
+                    <label>
+                        <input type="checkbox" is="emby-checkbox" class="chkHideFromUnusedDevices" />
+                        <span>${HideFromUnusedDevices}</span>
+                    </label>
+                </div>
+                <br />
+                <div>
+                    <button is="emby-button" type="submit" class="raised button-submit block">
+                        <span>${ButtonSave}</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

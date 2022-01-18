@@ -1,0 +1,132 @@
+<div is="emby-scroller" class="view flex flex-direction-column scrollFrameY flex-grow" data-mousewheel="true" data-horizontal="false" data-centerfocus="card">
+    <div class="scrollSlider flex-grow flex-direction-column padded-left padded-left-page padded-right padded-top-page padded-bottom-page settingsContainer">
+
+        <form class="auto-center padded-top">
+
+            <div class="verticalSection">
+
+                <div class="selectContainer">
+                    <select is="emby-select" class="selectSubtitleLanguage" label="${LabelPreferredSubtitleLanguage}"></select>
+                </div>
+                <div class="selectContainer">
+                    <select is="emby-select" class="selectSubtitlePlaybackMode" label="${LabelSubtitlePlaybackMode}">
+                        <option value="Default">${Default}</option>
+                        <option value="Smart">${Smart}</option>
+                        <option value="OnlyForced">${OnlyForcedSubtitles}</option>
+                        <option value="Always">${AlwaysPlaySubtitles}</option>
+                        <option value="None">${NoSubtitles}</option>
+                    </select>
+                    <div class="fieldDescription subtitlesDefaultHelp subtitlesHelp hide">${DefaultSubtitlesHelp}</div>
+                    <div class="fieldDescription subtitlesSmartHelp subtitlesHelp hide">${SmartSubtitlesHelp}</div>
+                    <div class="fieldDescription subtitlesAlwaysHelp subtitlesHelp hide">${AlwaysPlaySubtitlesHelp}</div>
+                    <div class="fieldDescription subtitlesOnlyForcedHelp subtitlesHelp hide">${OnlyForcedSubtitlesHelp}</div>
+                    <div class="fieldDescription subtitlesNoneHelp subtitlesHelp hide">${NoSubtitlesHelp}</div>
+                </div>
+                <div class="checkboxContainer checkboxContainer-withDescription">
+                    <label>
+                        <input type="checkbox" is="emby-checkbox" class="chkRememberSubtitles" />
+                        <span>${RememberSelectedSubtitleTracks}</span>
+                    </label>
+                    <div class="fieldDescription checkboxFieldDescription">${RememberSelectedSubtitleTracksHelp}</div>
+
+                    <div class="fieldDescription checkboxFieldDescription fldClearTrackSelections hide">
+                        <button is="emby-button" type="button" class="button-link btnClearTrackSelections" data-mode="subtitles">
+                            <i class="md-icon button-icon button-icon-left">clear_all</i>
+                            <span>${ClearSavedTrackSelections}</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="verticalSection subtitleAppearanceSection hide">
+
+                <h2 class="sectionTitle">
+                    ${HeaderSubtitleAppearance}
+                </h2>
+
+                <div style="margin-bottom:1.5em;">
+                    <div class="subtitleappearance-preview flex align-items-center justify-content-center" style="border: .08em solid gray; color: black; background: #6A96BD; padding:1em;">
+                        <div class="subtitleappearance-preview-window flex align-items-center justify-content-center" style="width: 90%; padding: .25em;">
+                            <div class="subtitleappearance-preview-text flex align-items-center justify-content-center">
+                                ${TheseSettingsAffectSubtitlesOnThisDevice}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fieldDescription">${SubtitleAppearanceSettingsDisclaimer}</div>
+                    <div class="fieldDescription">${SubtitleAppearanceSettingsAlsoPassedToCastDevices}</div>
+                </div>
+
+                <div class="selectContainer">
+                    <select is="emby-select" class="selectTextSize" label="${LabelTextSize}">
+                        <option value="smaller">${Smaller}</option>
+                        <option value="small">${Small}</option>
+                        <option value="">${Normal}</option>
+                        <option value="large">${Large}</option>
+                        <option value="larger">${Larger}</option>
+                        <option value="extralarge">${ExtraLarge}</option>
+                    </select>
+                </div>
+
+                <div class="selectContainer hide">
+                    <select is="emby-select" class="selectVerticalPosition" label="${LabelVerticalPositionFromBottom}">
+                    </select>
+                </div>
+                <div class="inputContainer hide">
+                    <input is="emby-input" class="inputTextBackground" label="${LabelTextBackgroundColor}" type="text" />
+                </div>
+                <div class="selectContainer">
+                    <select is="emby-select" class="inputTextColor" label="${LabelTextColor}">
+                        <option value="#000000">${Black}</option>
+                        <option value="#0000FF">${Blue}</option>
+                        <option value="#00FFFF">${Cyan}</option>
+                        <option value="#008000">${Green}</option>
+                        <option value="#00FF00">${Lime}</option>
+                        <option value="#FF00FF">${Magenta}</option>
+                        <option value="#FFA500">${Orange}</option>
+                        <option value="#FFC0CB">${Pink}</option>
+                        <option value="#FF0000">${Red}</option>
+                        <option value="#FFFF00">${Yellow}</option>
+                        <option value="#ffffff">${White}</option>
+                    </select>
+                </div>
+                <div class="selectContainer">
+                    <select is="emby-select" class="selectDropShadow" label="${LabelDropShadow}">
+                        <option value="none">${None}</option>
+                        <option value="raised">${Raised}</option>
+                        <option value="depressed">${Depressed}</option>
+                        <option value="uniform">${Uniform}</option>
+                        <option value="dropshadow">${DropShadow}</option>
+                    </select>
+                </div>
+                <div class="selectContainer">
+                    <select is="emby-select" class="selectBackgroundColor" label="${LabelBackgroundColor}">
+                        <option value="#000000">${Black}</option>
+                        <option value="#0000FF">${Blue}</option>
+                        <option value="#00FFFF">${Cyan}</option>
+                        <option value="#008000">${Green}</option>
+                        <option value="#00FF00">${Lime}</option>
+                        <option value="#FF00FF">${Magenta}</option>
+                        <option value="#FFA500">${Orange}</option>
+                        <option value="#FFC0CB">${Pink}</option>
+                        <option value="#FF0000">${Red}</option>
+                        <option value="transparent">${Transparent}</option>
+                        <option value="#FFFF00">${Yellow}</option>
+                        <option value="#ffffff">${White}</option>
+                    </select>
+                </div>
+                <div class="selectContainer">
+                    <select is="emby-select" class="selectBackgroundOpacity" label="${LabelBackgroundOpacity}">
+                        <option value=".25">25%</option>
+                        <option value=".50">50%</option>
+                        <option value=".75">75%</option>
+                        <option value="1">100%</option>
+                    </select>
+                </div>
+            </div>
+
+            <button is="emby-button" type="submit" class="raised button-submit block btnSave hide">
+                <span>${Save}</span>
+            </button>
+        </form>
+    </div>
+</div>

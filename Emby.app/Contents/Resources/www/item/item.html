@@ -1,0 +1,336 @@
+<div is="emby-scroller" data-horizontal="false" data-centerfocus="true" data-navcommands="card" data-forcescrollbar="true" class="itemView view flex flex-direction-column scrollFrameY flex-grow" data-bindheader="true">
+    <div class="scrollSlider flex-grow padded-top-page itemMainScrollSlider">
+
+        <div class="topDetailsContainer flex flex-direction-row">
+            <div class="item-fixed-side padded-left hide focuscontainer-down focuscontainer-right flex flex-direction-column flex-shrink-zero">
+
+                <div is="emby-itemscontainer" class="detailImageContainer detailImageContainer-side justify-content-center">
+                </div>
+
+            </div>
+
+            <div class="flex-grow topDetailsMain flex flex-direction-column">
+                <div id="itemBackdrop" class="itemBackdrop" loading="lazy">
+                </div>
+
+                <div class="verticalSection detailMainContainer flex flex-direction-row align-items-flex-start padded-left padded-right">
+                    <div is="emby-itemscontainer" class="detailImageContainer detailImageContainer-main flex flex-direction-column justify-content-center">
+                    </div>
+
+                    <div class="flex-grow detailTextContainer">
+
+                        <div class="flex align-items-center flex-direction-row detailTextContainerInner">
+
+                            <div class="flex flex-direction-column" style="min-width:60%;">
+                                <div class="nameContainer focuscontainer-x">
+
+                                </div>
+                                <div class="mediaInfo mediaInfoPrimary flex align-items-center flex-wrap-wrap reduce-font-size-tv mediaInfoItems">
+
+                                </div>
+                            </div>
+
+                            <div class="detailLogoContainer flex-grow hide">
+                                <div class="detailLogo" loading="lazy"></div>
+                            </div>
+                        </div>
+
+                        <div class="mediaInfo mediaInfoSecondary flex align-items-center flex-wrap-wrap reduce-font-size-tv mediaInfoItems" style="margin: .5em 0;">
+
+                        </div>
+
+                        <form class="trackSelections flex align-items-center flex-wrap-wrap hide focuscontainer-x reduce-font-size-tv" style="margin: .5em 0;padding: 0;max-width:initial;">
+                            <div class="selectContainer selectContainer-inline selectSourceContainer hide trackSelectionFieldContainer flex-shrink-zero">
+                                <select is="emby-select" class="selectSource detailTrackSelect emby-select-inline" label=""></select>
+                            </div>
+                            <div class="selectContainer selectContainer-inline selectVideoContainer hide trackSelectionFieldContainer flex-shrink-zero">
+                                <select is="emby-select" class="selectVideo detailTrackSelect emby-select-inline" label=""></select>
+                            </div>
+                            <div class="selectContainer selectContainer-inline selectAudioContainer hide trackSelectionFieldContainer flex-shrink-zero">
+                                <select is="emby-select" class="selectAudio detailTrackSelect emby-select-inline" label="" data-menu="custom"></select>
+                            </div>
+                            <div class="selectContainer selectContainer-inline selectSubtitlesContainer hide trackSelectionFieldContainer">
+                                <select is="emby-select" class="selectSubtitles detailTrackSelect emby-select-inline" label="" data-menu="custom"></select>
+                            </div>
+                        </form>
+
+                        <div class="detailButtons mainDetailButtons flex align-items-flex-start flex-wrap-wrap focuscontainer-x">
+
+                            <div class="resumeButtonContainer flex flex-wrap-wrap flex-direction-column hide">
+                                <button is="emby-button" type="button" class="btnResume raised detailButton" data-mode="resume" title="${Resume}">
+                                    <i class="md-icon button-icon button-icon-left">&#xE037;</i>
+                                    <span class="resumeButtonText detailButton-lowres">${Resume}</span>
+                                    <span class="resumeButtonText detailButton-highres">${Resume}</span>
+                                </button>
+                                <div class="resumeInfo hide">
+                                    <div class="resumeSpacer1 hide">&nbsp;</div>
+                                    <div class="resumeSpacer2 hide">&nbsp;</div>
+                                    <div class="resumeInfoDetail">
+                                        <div class="resumeName hide"></div>
+                                        <div class="resumeProgress hide flex align-items-center">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button is="emby-button" type="button" class="btnPlay btnMainPlay hide raised detailButton" data-mode="play" title="${Play}">
+                                <i class="md-icon button-icon button-icon-left">&#xE037;</i>
+                                <span class="playButtonText">${Play}</span>
+                            </button>
+
+                            <button is="emby-button" type="button" class="btnShuffle hide raised detailButton" title="${Shuffle}">
+                                <i class="md-icon button-icon button-icon-left">&#xE043;</i>
+                                <span>${Shuffle}</span>
+                            </button>
+
+                            <button is="emby-button" type="button" class="btnQueue hide fab detailButton" title="${HeaderAddToPlayQueue}">
+                                <i class="md-icon">playlist_add</i>
+                            </button>
+
+                            <button is="emby-button" type="button" class="btnPlayTrailer hide raised detailButton" title="${Trailer}" aria-label="${Trailer}">
+                                <i class="md-icon button-icon button-icon-left">&#xE8DA;</i>
+                                <span>${Trailer}</span>
+                            </button>
+
+                            <button is="emby-button" type="button" class="btnCancelSeriesTimer hide raised detailButton" title="${HeaderCancelSeries}">
+                                <i class="md-icon button-icon button-icon-left recordingIcon-active">&#xE872;</i>
+                                <span>${HeaderCancelSeries}</span>
+                            </button>
+
+                            <button is="emby-button" type="button" class="btnCancelTimer hide raised detailButton" title="${HeaderStopRecording}">
+                                <i class="md-icon button-icon button-icon-left recordingIcon-active">&#xE047;</i>
+                                <span>${HeaderStopRecording}</span>
+                            </button>
+
+                            <button is="emby-playstatebutton" type="button" class="btnPlaystate hide raised detailButton detailButton-highres2">
+                                <i class="md-icon button-icon button-icon-left" style="margin-top:.08em;margin-bottom:.08em;">&#xE5CA;</i>
+                                <span class="button-text"></span>
+                            </button>
+
+                            <button is="emby-downloadbutton" type="button" class="btnSyncDownload hide fab detailButton" title="${Download}">
+                                <i class="md-icon">&#xf090;</i>
+                            </button>
+
+                            <button is="emby-playstatebutton" type="button" class="btnPlaystate hide fab detailButton detailButton-lowres2">
+                                <i class="md-icon detailButtonIcon">&#xE5CA;</i>
+                            </button>
+
+                            <button is="emby-ratingbutton" type="button" class="btnUserRating hide fab detailButton">
+                                <i class="md-icon">&#xE87D;</i>
+                            </button>
+
+                            <button is="emby-button" type="button" class="btnDeleteItem hide fab detailButton" title="${Delete}" aria-label="${Delete}">
+                                <i class="md-icon">&#xE872;</i>
+                            </button>
+
+                            <button is="emby-button" type="button" class="btnMoreCommands hide fab detailButton" title="${More}" aria-label="${More}">
+                                <i class="md-icon">&#xE5D3;</i>
+                            </button>
+
+                            <div class="recordSeriesContainer recordingFields-buttons flex align-items-flex-start hide">
+                                <button is="emby-button" type="button" class="seriesRecordingButton detailButton raised" title="${HeaderRecordSeries}">
+                                    <i class="md-icon button-icon button-icon-left recordingIcon">&#xE062;</i>
+                                    <span class="button-text seriesRecordingButtonText">${HeaderRecordSeries}</span>
+                                </button>
+
+                                <button is="emby-button" type="button" class="manageRecordingButton btnManageSeriesRecording hide detailButton raised" title="${SeriesSettings}">
+                                    <i class="md-icon button-icon button-icon-left recordingIcon">&#xE8B8;</i>
+                                    <span class="button-text seriesRecordingButtonText">${SeriesSettings}</span>
+                                </button>
+                            </div>
+
+                            <button is="emby-button" type="button" class="singleRecordingButton detailButton hide raised" title="${Record}">
+                                <i class="md-icon button-icon button-icon-left recordingIcon">&#xE061;</i>
+                                <span class="button-text singleRecordingButtonText">${Record}</span>
+                            </button>
+
+                            <button is="emby-button" type="button" class="manageRecordingButton btnManageRecording hide detailButton raised" title="${Settings}">
+                                <i class="md-icon button-icon button-icon-left recordingIcon">&#xE8B8;</i>
+                                <span class="button-text seriesRecordingButtonText">${Settings}</span>
+                            </button>
+                        </div>
+
+                        <h3 class="tagline hide"></h3>
+                        <p class="birthDate hide">
+
+                        </p>
+                        <p class="deathDate hide">
+
+                        </p>
+
+                        <div class="overview-container hide flex flex-direction-row align-items-flex-end focuscontainer-x">
+
+                            <button disabled type="button" is="emby-button" class="button-link btnOverviewText" style="color:inherit;text-align:left;">
+                                <div class="overview-text readOnlyContent"></div>
+                            </button>
+                            <a href="#" is="emby-linkbutton" class="button-link btnReadMore hide flex-shrink-zero secondaryText">${HeaderReadMore}</a>
+                        </div>
+
+                        <p class="directors hide focusable focuscontainer-x readOnlyContent reduce-font-size-tv">
+
+                        </p>
+
+                        <div class="seriesRecordingEditor hide" style="margin-top:2em;">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="trackList vertical-list padded-left padded-right padded-bottom hide focuscontainer-left" is="emby-itemscontainer" style="margin-bottom:1.5em;">
+
+                </div>
+            </div>
+        </div>
+
+        <div class="details-additionalContent padded-bottom-page hide">
+
+            <div is="emby-itemscontainer" class="programGuideSection hide itemsContainer programGuideItemsContainer vertical-list padded-left padded-right focuscontainer-x padded-bottom-page" data-virtualscrolllayout="vertical-grid"></div>
+
+            <div class="verticalSection additionalPartsSection hide">
+                <h2 class="sectionTitle sectionTitle-cards padded-left padded-right">${HeaderAdditionalParts}</h2>
+
+                <div is="emby-scroller" class="emby-scroller padded-top-focusscale padded-bottom-focusscale" data-mousewheel="false" data-centerfocus="true" data-horizontal="true">
+
+                    <div is="emby-itemscontainer" class="scrollSlider focuscontainer-x itemsContainer additionalPartsItemsContainer padded-left padded-right focusable" data-virtualscrolllayout="horizontal-grid"></div>
+                </div>
+            </div>
+
+            <div class="verticalSection itemNextUpSection hide">
+                <h2 class="sectionTitle sectionTitle-cards padded-left padded-right">${HeaderNextUp}</h2>
+
+                <div is="emby-scroller" class="emby-scroller padded-top-focusscale padded-bottom-focusscale" data-mousewheel="false" data-centerfocus="true" data-horizontal="true">
+
+                    <div is="emby-itemscontainer" class="scrollSlider focuscontainer-x itemsContainer padded-left padded-right focusable nextUpItemsContainer" data-monitor="videoplayback" data-virtualscrolllayout="horizontal-grid"></div>
+                </div>
+            </div>
+
+            <div class="verticalSection verticalSection-extrabottompadding artistSongsSection hide">
+                <div class="sectionTitleContainer sectionTitleContainer-cards padded-left padded-right artistSongsItemsHeader"></div>
+
+                <div is="emby-scroller" class="emby-scroller padded-top-focusscale padded-bottom-focusscale" data-mousewheel="false" data-centerfocus="true" data-horizontal="true">
+
+                    <div is="emby-itemscontainer" class="scrollSlider focuscontainer-x itemsContainer padded-left padded-right focusable artistSongsItemsContainer itemsContainer-sideFooters" data-virtualscrolllayout="horizontal-grid"></div>
+                </div>
+            </div>
+            <div class="verticalSection childrenSection hide">
+
+            </div>
+
+            <div class="verticalSection trailersSection hide">
+                <h2 class="sectionTitle sectionTitle-cards padded-left padded-right">${Trailers}</h2>
+
+                <div is="emby-scroller" class="emby-scroller padded-top-focusscale padded-bottom-focusscale" data-mousewheel="false" data-centerfocus="true" data-horizontal="true">
+
+                    <div is="emby-itemscontainer" class="scrollSlider focuscontainer-x itemsContainer trailersItemsContainer padded-left padded-right focusable" data-virtualscrolllayout="horizontal-grid"></div>
+                </div>
+            </div>
+            <div class="verticalSection moreFromSeasonSection hide">
+                <h2 class="sectionTitle sectionTitle-cards padded-left padded-right"></h2>
+
+                <div is="emby-scroller" class="emby-scroller padded-top-focusscale padded-bottom-focusscale" data-mousewheel="false" data-centerfocus="true" data-horizontal="true">
+
+                    <div is="emby-itemscontainer" class="scrollSlider focuscontainer-x itemsContainer moreFromSeasonItemsContainer padded-left padded-right focusable" data-virtualscrolllayout="horizontal-grid"></div>
+                </div>
+            </div>
+            <div class="verticalSection peopleSection hide">
+                <h2 class="sectionTitle sectionTitle-cards padded-left padded-right">${HeaderCastCrew}</h2>
+
+                <div is="emby-scroller" class="emby-scroller padded-top-focusscale padded-bottom-focusscale" data-mousewheel="false" data-centerfocus="true" data-horizontal="true">
+
+                    <div is="emby-itemscontainer" class="scrollSlider focuscontainer-x itemsContainer padded-left padded-right focusable peopleItemsContainer" data-virtualscrolllayout="horizontal-grid"></div>
+                </div>
+            </div>
+            <div class="verticalSection extrasSection hide">
+                <h2 class="sectionTitle sectionTitle-cards padded-left padded-right">${Extras}</h2>
+
+                <div is="emby-scroller" class="emby-scroller padded-top-focusscale padded-bottom-focusscale" data-mousewheel="false" data-centerfocus="true" data-horizontal="true">
+
+                    <div is="emby-itemscontainer" class="scrollSlider focuscontainer-x itemsContainer extrasItemsContainer padded-left padded-right focusable" data-virtualscrolllayout="horizontal-grid"></div>
+                </div>
+            </div>
+            <div class="verticalSection scenesSection hide">
+                <h2 class="sectionTitle sectionTitle-cards padded-left padded-right">${Chapters}</h2>
+
+                <div is="emby-scroller" class="emby-scroller padded-top-focusscale padded-bottom-focusscale" data-mousewheel="false" data-centerfocus="true" data-horizontal="true">
+
+                    <div is="emby-itemscontainer" class="scrollSlider focuscontainer-x itemsContainer chaptersItemsContainer padded-left padded-right focusable" data-virtualscrolllayout="horizontal-grid"></div>
+                </div>
+            </div>
+
+            <div class="verticalSection verticalSection-extrabottompadding tagsSection hide">
+                <h2 class="sectionTitle padded-left" style="margin-bottom:.4em;">${Tags}</h2>
+                <div class="itemTags padded-left padded-right focusable"></div>
+            </div>
+            <div class="verticalSection moreFromArtistSection hide">
+                <h2 class="sectionTitle sectionTitle-cards padded-left padded-right"></h2>
+                <div is="emby-scroller" class="emby-scroller padded-top-focusscale padded-bottom-focusscale" data-mousewheel="false" data-centerfocus="true" data-horizontal="true">
+
+                    <div is="emby-itemscontainer" class="scrollSlider focuscontainer-x itemsContainer moreFromArtistItemsContainer padded-left padded-right focusable" data-virtualscrolllayout="horizontal-grid"></div>
+                </div>
+            </div>
+            <div class="verticalSection seriesScheduleSection hide">
+                <h2 class="sectionTitle sectionTitle-cards padded-left padded-right">${HeaderUpcomingOnTV}</h2>
+
+                <div is="emby-scroller" class="emby-scroller padded-top-focusscale padded-bottom-focusscale" data-mousewheel="false" data-centerfocus="true" data-horizontal="true">
+
+                    <div is="emby-itemscontainer" class="scrollSlider focuscontainer-x itemsContainer padded-left padded-right focusable seriesScheduleItemsContainer" data-virtualscrolllayout="horizontal-grid"></div>
+                </div>
+            </div>
+
+            <div class="verticalSection appearsOnListsSection hide">
+                <h2 class="sectionTitle sectionTitle-cards padded-left padded-right">${HeaderIncludedIn}</h2>
+
+                <div is="emby-scroller" class="emby-scroller padded-top-focusscale padded-bottom-focusscale" data-mousewheel="false" data-centerfocus="true" data-horizontal="true">
+
+                    <div is="emby-itemscontainer" class="scrollSlider focuscontainer-x itemsContainer appearsOnListsItemsContainer padded-left padded-right focusable" data-virtualscrolllayout="horizontal-grid"></div>
+                </div>
+            </div>
+
+            <div class="peopleItems">
+
+            </div>
+
+            <div class="verticalSection similarSection hide">
+                <h2 class="sectionTitle sectionTitle-cards padded-left padded-right">${HeaderMoreLikeThis}</h2>
+
+                <div is="emby-scroller" class="emby-scroller padded-top-focusscale padded-bottom-focusscale" data-mousewheel="false" data-centerfocus="true" data-horizontal="true">
+
+                    <div is="emby-itemscontainer" class="scrollSlider focuscontainer-x itemsContainer padded-left padded-right focusable similarItemsContainer"></div>
+                </div>
+            </div>
+
+            <div class="verticalSection similarOnLiveTVCollapsible hide">
+                <h2 class="sectionTitle sectionTitle-cards padded-left padded-right">${HeaderMoreLikeThisOnLiveTV}</h2>
+
+                <div is="emby-scroller" class="emby-scroller padded-top-focusscale padded-bottom-focusscale" data-mousewheel="false" data-centerfocus="true" data-horizontal="true">
+
+                    <div is="emby-itemscontainer" class="scrollSlider focuscontainer-x itemsContainer padded-left padded-right focusable similarOnLiveTVItemsContainer"></div>
+                </div>
+            </div>
+
+            <div class="verticalSection seriesTimerScheduleSection padded-left padded-right hide">
+                <h1>
+                    ${Schedule}
+                </h1>
+                <div class="seriesTimerSchedule">
+                    <div is="emby-itemscontainer" class="itemsContainer seriesTimerScheduleItemsContainer vertical-list focuscontainer-x"></div>
+                </div>
+            </div>
+
+            <div class="verticalSection linksSection hide verticalSection-extrabottompadding">
+                <h2 class="sectionTitle padded-left" style="margin-bottom:.4em;">${Links}</h2>
+                <div class="itemLinks padded-left padded-right focusable"></div>
+            </div>
+
+            <div class="verticalSection audioVideoMediaInfo hide mediainfo-forcehide">
+                <h2 class="padded-left sectionTitle sectionTitle-cards mediaInfoHeader" style="margin-bottom:0;">${HeaderMediaInfo}</h2>
+                <div class="splitVersionContainer padded-top padded-bottom padded-left padded-right">
+                    <button is="emby-button" type="button" class="raised btnSplitVersions subdued">${HeaderSplitVersionsApart}</button>
+                </div>
+
+                <div class="mediaSources"></div>
+            </div>
+        </div>
+
+    </div>
+</div>

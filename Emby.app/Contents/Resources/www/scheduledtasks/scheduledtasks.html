@@ -1,0 +1,52 @@
+<div is="emby-scroller" class="view flex flex-direction-column scrollFrameY flex-grow" data-mousewheel="true" data-horizontal="false" data-centerfocus="card">
+    <div class="scrollSlider flex-grow flex-direction-column padded-left padded-left-page padded-right padded-top-page padded-bottom-page settingsContainer">
+
+        <style>
+            .taskProgressOuter {
+                height: 6px;
+                background: #eee;
+                border-radius: 2px;
+            }
+
+            .taskProgressInner {
+                border-radius: 2px;
+                height: 100%;
+                background: #52B54B;
+            }
+        </style>
+
+        <div class="divScheduledTasks auto-center readOnlyContent">
+
+            <div style="margin:1em 0;">
+                <div class="premiereInfo"></div>
+            </div>
+
+            <div style="margin: 2em 0;" class="progressContainer hide">
+                <div class="secondaryText progressDescription" style="margin:0 0 .5em;"></div>
+                <div class="itemProgressBar"><div class="itemProgressBarForeground" style="width:50%;"></div></div>
+            </div>
+
+            <div style="margin: 1.5em 0;">
+                <h3 class="checkboxListLabel">${UploadToFollowingServers}</h3>
+
+                <div class="checkboxList uploadServerList">
+
+                </div>
+            </div>
+
+            <label class="checkboxContainer">
+                <input type="checkbox" is="emby-checkbox" class="chkWifi" />
+                <span>${UploadOnlyOnWifi}</span>
+            </label>
+
+            <div class="fldUploadFolders hide" style="margin: 1.5em 0;">
+                <h3 class="checkboxListLabel">${HeaderFoldersToUpload}</h3>
+
+                <div class="uploadFolderList checkboxList">
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,41 @@
+<div is="emby-scroller" class="view flex flex-direction-column scrollFrameY flex-grow" data-mousewheel="true" data-horizontal="false" data-centerfocus="card" data-require="emby-input,emby-checkbox">
+    <div class="scrollSlider flex-grow flex-direction-column padded-left padded-left-page padded-right padded-top-page padded-bottom-page settingsContainer">
+        <form class="auto-center padded-top">
+
+            <div class="warningBanner" style="margin-bottom:2em;">
+                <i class="md-icon warningBannerIcon">warning</i>
+                <span class="warningBannerText">${AdvancedOptionsWarning}</span>
+            </div>
+
+            <div class="inputContainer fldCacheSize hide">
+                <input is="emby-input" type="number" step="1" min="64" class="txtCacheSize" label="${LabelDatabaseCacheSize}" />
+                <div class="fieldDescription">${LabelDatabaseCacheSizeHelp}</div>
+            </div>
+
+            <div class="checkboxContainer checkboxContainer-withDescription fldOptimize hide">
+                <label>
+                    <input type="checkbox" is="emby-checkbox" class="chkOptimizeOnShutdown" />
+                    <span>${LabelOptimizeDatabaseOnShutdown}</span>
+                </label>
+                <div class="fieldDescription checkboxFieldDescription">${LabelOptimizeDatabaseOnShutdownHelp}</div>
+            </div>
+
+            <div class="inputContainer fldAnalysisLimit hide">
+                <input is="emby-input" type="number" step="1" min="400" class="txtAnalysisLimit" label="${LabelDatabaseAnalysisLimit}" />
+                <div class="fieldDescription">${LabelDatabaseAnalysisLimitHelp}</div>
+            </div>
+
+            <div class="checkboxContainer checkboxContainer-withDescription">
+                <label>
+                    <input type="checkbox" is="emby-checkbox" class="chkVacuum" />
+                    <span>${LabelVacuumDb}</span>
+                </label>
+                <div class="fieldDescription checkboxFieldDescription">${LabelVacuumDbHelp}</div>
+            </div>
+
+            <button is="emby-button" type="submit" class="raised button-submit block">
+                <span>${ButtonSave}</span>
+            </button>
+        </form>
+    </div>
+</div>

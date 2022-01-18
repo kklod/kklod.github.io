@@ -1,0 +1,64 @@
+<div is="emby-scroller" class="view flex flex-direction-column scrollFrameY flex-grow" data-mousewheel="true" data-horizontal="false" data-centerfocus="card">
+    <div class="scrollSlider flex-grow flex-direction-column padded-left padded-left-page padded-right padded-top-page padded-bottom-page settingsContainer">
+        <div class="readOnlyContent auto-center">
+
+            <div class="verticalSection">
+                <div class="sectionTitleContainer flex align-items-center">
+                    <h2 class="sectionTitle username"></h2>
+                </div>
+            </div>
+
+            <div class="localnav">
+                <a href="#" is="emby-linkbutton" class="raised userEditTabButton" data-href="users/user">${TabProfile}</a>
+                <a is="emby-linkbutton" href="#" class="raised ui-btn-active">${TabAccess}</a>
+                <a href="#" is="emby-linkbutton" class="raised userEditTabButton" data-href="users/userparentalcontrol">${TabParentalControl}</a>
+                <a href="#" is="emby-linkbutton" class="raised userEditTabButton" data-href="userpassword.html">${TabPassword}</a>
+            </div>
+            <form class="userLibraryAccessForm">
+
+                <div class="folderAccessContainer">
+                    <h2>${HeaderLibraryAccess}</h2>
+                    <label class="checkboxContainer">
+                        <input type="checkbox" is="emby-checkbox" class="chkEnableAllFolders" />
+                        <span>${OptionEnableAccessToAllLibraries}</span>
+                    </label>
+                    <div class="folderAccessListContainer">
+                        <div class="folderAccess">
+                        </div>
+                    </div>
+                    <div class="fieldDescription">${LibraryAccessHelp}</div>
+                </div>
+                <div class="channelAccessContainer hide">
+                    <h2 class="sectionTitle">${HeaderChannelAccess}</h2>
+                    <div class="checkboxList">
+                        <label>
+                            <input type="checkbox" is="emby-checkbox" class="chkEnableAllChannels" />
+                            <span>${All}</span>
+                        </label>
+                        <div class="channelAccess checkboxList">
+                        </div>
+                    </div>
+                    <div class="fieldDescription">${ChannelAccessHelp}</div>
+                </div>
+                <div class="deviceAccessContainer hide">
+                    <h2 class="sectionTitle">${HeaderDeviceAccess}</h2>
+                    <div class="checkboxList">
+                        <label>
+                            <input type="checkbox" is="emby-checkbox" class="chkEnableAllDevices" />
+                            <span>${All}</span>
+                        </label>
+                        <div class="deviceAccess checkboxList">
+                        </div>
+                    </div>
+                    <div class="fieldDescription">${DeviceAccessHelp}</div>
+                </div>
+                <br />
+                <div>
+                    <button is="emby-button" type="submit" class="raised button-submit block">
+                        <span>${ButtonSave}</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
